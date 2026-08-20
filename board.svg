@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="426mm" height="426mm" viewBox="0 0 426 426" version="1.1">
+  <!-- Bleed 3mm (trim box from 3,3 to 423,423) -->
+  <rect x="0" y="0" width="426" height="426" fill="#ffffff"/>
+
+  <!-- Main board area at 3mm inset -->
+  <g id="board" transform="translate(3,3)">
+    <rect x="0" y="0" width="420" height="420" fill="#f6f0e6" stroke="#222" stroke-width="2"/>
+
+    <!-- 3x3 rooms grid (each 140x140 mm) -->
+    <g id="rooms">
+      <!-- Row 1 -->
+      <rect x="0"   y="0"   width="140" height="140" fill="#efe6d8" stroke="#333" stroke-width="1.5"/>
+      <rect x="140" y="0"   width="140" height="140" fill="#efe6d8" stroke="#333" stroke-width="1.5"/>
+      <rect x="280" y="0"   width="140" height="140" fill="#efe6d8" stroke="#333" stroke-width="1.5"/>
+      <!-- Row 2 -->
+      <rect x="0"   y="140" width="140" height="140" fill="#efe6d8" stroke="#333" stroke-width="1.5"/>
+      <rect x="140" y="140" width="140" height="140" fill="#efe6d8" stroke="#333" stroke-width="1.5"/>
+      <rect x="280" y="140" width="140" height="140" fill="#efe6d8" stroke="#333" stroke-width="1.5"/>
+      <!-- Row 3 -->
+      <rect x="0"   y="280" width="140" height="140" fill="#efe6d8" stroke="#333" stroke-width="1.5"/>
+      <rect x="140" y="280" width="140" height="140" fill="#efe6d8" stroke="#333" stroke-width="1.5"/>
+      <rect x="280" y="280" width="140" height="140" fill="#efe6d8" stroke="#333" stroke-width="1.5"/>
+    </g>
+
+    <!-- Simple door openings (gaps) -->
+    <g id="doors" fill="none">
+      <!-- vertical openings on vertical walls -->
+      <rect x="136" y="45" width="8" height="50" fill="#f6f0e6"/>
+      <rect x="276" y="45" width="8" height="50" fill="#f6f0e6"/>
+      <rect x="136" y="185" width="8" height="50" fill="#f6f0e6"/>
+      <rect x="276" y="185" width="8" height="50" fill="#f6f0e6"/>
+      <rect x="136" y="325" width="8" height="50" fill="#f6f0e6"/>
+      <rect x="276" y="325" width="8" height="50" fill="#f6f0e6"/>
+
+      <!-- horizontal openings on horizontal walls -->
+      <rect x="45"  y="136" width="50" height="8" fill="#f6f0e6"/>
+      <rect x="185" y="136" width="50" height="8" fill="#f6f0e6"/>
+      <rect x="325" y="136" width="50" height="8" fill="#f6f0e6"/>
+      <rect x="45"  y="276" width="50" height="8" fill="#f6f0e6"/>
+      <rect x="185" y="276" width="50" height="8" fill="#f6f0e6"/>
+      <rect x="325" y="276" width="50" height="8" fill="#f6f0e6"/>
+    </g>
+
+    <!-- Room names in Arabic (centered in each 140x140 cell) -->
+    <g id="labels" font-family="Noto Naskh Arabic, Arial, sans-serif" fill="#111" text-anchor="middle" font-size="14">
+      <text x="70"  y="75">الصالون</text>
+      <text x="210" y="75">قاعة الرقص</text>
+      <text x="350" y="75">المكتبة</text>
+
+      <text x="70"  y="210">المطبخ</text>
+      <text x="210" y="210">غرفة الطعام</text>
+      <text x="350" y="210">الدفيئة</text>
+
+      <text x="70"  y="345">غرفة البلياردو</text>
+      <text x="210" y="345">القاعة</text>
+      <text x="350" y="345">المكتب</text>
+    </g>
+
+    <!-- Player starting circles (colors only, no text) -->
+    <g id="starts">
+      <circle cx="43"  cy="210" r="12" fill="#7c3f98" stroke="#333" stroke-width="1.2"/>
+      <circle cx="210" cy="403" r="12" fill="#c92a2a" stroke="#333" stroke-width="1.2"/>
+      <circle cx="43"  cy="403" r="12" fill="#d9b21a" stroke="#333" stroke-width="1.2"/>
+      <circle cx="43"  cy="43"  r="12" fill="#ffffff" stroke="#333" stroke-width="1.2"/>
+      <circle cx="383" cy="43"  r="12" fill="#2a8a2a" stroke="#333" stroke-width="1.2"/>
+      <circle cx="383" cy="210" r="12" fill="#2b6eb8" stroke="#333" stroke-width="1.2"/>
+    </g>
+
+    <!-- Inner decorative border -->
+    <rect x="8" y="8" width="404" height="404" fill="none" stroke="#6b5846" stroke-width="2"/>
+  </g>
+
+  <!-- Crop / trim marks (at trim box corners: trim box from 3 to 423) -->
+  <g id="crop-marks" stroke="#000" stroke-width="0.8" stroke-linecap="butt">
+    <!-- Top-left -->
+    <line x1="3" y1="0"   x2="3" y2="6"/>
+    <line x1="0" y1="3"   x2="6" y2="3"/>
+    <!-- Top-right -->
+    <line x1="423" y1="0"   x2="423" y2="6"/>
+    <line x1="420" y1="3"   x2="426" y2="3"/>
+    <!-- Bottom-left -->
+    <line x1="3"   y1="420" x2="3" y2="426"/>
+    <line x1="0"   y1="423" x2="6" y2="423"/>
+    <!-- Bottom-right -->
+    <line x1="423" y1="420" x2="423" y2="426"/>
+    <line x1="420" y1="423" x2="426" y2="423"/>
+  </g>
+
+  <!-- Note for reviewer -->
+  <text x="213" y="415" font-size="6" text-anchor="middle" fill="#444" font-family="Arial, sans-serif">
+    Trim box: 3 mm bleed included — final trim after printing = 420×420 mm
+  </text>
+</svg>
